@@ -38,7 +38,7 @@ def hasil():
         if Name=="" or Age=="" or Total_Bilirubin=="" or Direct_Bilirubin=="" or Alkaline_Phosphotase=="" or Alamine_Aminotransferase=="" or Aspartate_Aminotransferase=="" or Total_Protiens=="" or Albumin=="" or Albumin_and_Globulin_Ratio=="":
             return render_template('error.html')
         else:
-            # prediksi Logistic Regression
+            # prediksi SVM
             prediksi = model.predict([[Age,Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio]])
             
             if prediksi[0]==1:
