@@ -5,7 +5,7 @@ Project ini bertujuan untuk memudahkan para spesialis/dokter untuk mengambil kep
 DESKRIPSI PROJECT
 - Tema : Prediksi Liver 
 - Project ini bersumber dari "North East of Andhra Pradesh, India.
-- Semua data adalah pasien Liver
+- Semua data adalah pasien Liver dan bukan pasien Liver
 - [Sumber Dataset](https://www.kaggle.com/uciml/indian-liver-patient-records)
 
 # Machine Learning
