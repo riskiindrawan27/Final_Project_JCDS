@@ -29,7 +29,7 @@ def hasil():
         Albumin_and_Globulin_Ratio = float(request.form['albuminandGlobulinRatio'])
         
         print(Direct_Bilirubin)
-        print(Alkaline_Phosphotasee)
+        print(Alkaline_Phosphotase)
         print(type(Alkaline_Phosphotase))
 
         df = pd.read_csv('liver_new.csv')
@@ -41,21 +41,21 @@ def hasil():
             # prediksi SVM
             prediksi = model.predict([[Age,Total_Bilirubin,Direct_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio]])
             
-            if prediksi[0]==1:
+            if prediksi[0]==0:
                 hasil = 'Liver'
             else:
                 hasil = 'Normal'
 
             # Grafik pasien dengan nilai rata2 orang normal
-            age1 = df[df['Dataset']==0]['Age'].mean()
-            tb1= df[df['Dataset']==0]['Total_Bilirubin'].mean()
-            db1 = df[df['Dataset']==0]['Direct_Bilirubin'].mean()
-            ap1 = df[df['Dataset']==0]['Alkaline_Phosphotase'].mean()
-            aa1 = df[df['Dataset']==0]['Alamine_Aminotransferase'].mean()
-            aam1 = df[df['Dataset']==0]['Aspartate_Aminotransferase'].mean()
-            tp1 = df[df['Dataset']==0]['Total_Protiens'].mean()
-            a1 = df[df['Dataset']==0]['Albumin'].mean()
-            agr1 = df[df['Dataset']==0]['Albumin_and_Globulin_Ratio'].mean()
+            age1 = df[df['Dataset']==1]['Age'].mean()
+            tb1= df[df['Dataset']==1]['Total_Bilirubin'].mean()
+            db1 = df[df['Dataset']==1]['Direct_Bilirubin'].mean()
+            ap1 = df[df['Dataset']==1]['Alkaline_Phosphotase'].mean()
+            aa1 = df[df['Dataset']==1]['Alamine_Aminotransferase'].mean()
+            aam1 = df[df['Dataset']==1]['Aspartate_Aminotransferase'].mean()
+            tp1 = df[df['Dataset']==1]['Total_Protiens'].mean()
+            a1 = df[df['Dataset']==1]['Albumin'].mean()
+            agr1 = df[df['Dataset']==1]['Albumin_and_Globulin_Ratio'].mean()
 
             x = ['rata2', 'me']
             age2 = [age1, Age]
@@ -101,7 +101,7 @@ def hasil():
             plt.bar(x, a2, color=['blue', 'green'])
             plt.title('Albumin')
 
-            plt.subplot(248)
+            plt.subplot(251)
             plt.bar(x, agr2, color=['blue', 'green'])
             plt.title('Albumin and Globulin Ratio')
 
