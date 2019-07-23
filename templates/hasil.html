@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <title>ERROR INPUT</title>
+    <title>HASIL PREDIKSI</title>
 </head>
 <body style="background-size:cover" background="https://wallpaperplay.com/walls/full/d/8/b/329997.jpg">
-    <h1 align="center" style="color: red; align-items: left">YOU DATA ENTER INCORRECT!</h1>
+    <center><h1 style="color: black">RESULT PREDICTION</h1></center>
     
-
-   <center><button type="button"><a href="http://localhost:5000/">KEMBALI</a></button></center>
-
+    <center><h3>NAMA : {{ profil['name']}}</h3></center>
+    <center><h3>RESULT PREDICTION : {{ profil['hasil']}}</h3></center>
+    <center><img src="{{ profil['grafik']}}"/></center>
+    <br><br>
+    <center><button type="button"><a href="http://localhost:5000/">BACK</a></button></center>
 </body>
 </html>
