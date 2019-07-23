@@ -1,6 +1,6 @@
 # Final_Project_JCDS
 # Liver Prediction
-Project ini bertujuan untuk memudahkan para spesialis/dokter untuk mengambil keputusan terkait "Apakah seseorang terindikasi penyakit Liver atau tidak?"
+Project ini bertujuan untuk memudahkan para spesialis/dokter untuk mengambil kesimpulan terkait "Apakah seseorang terindikasi penyakit Liver atau tidak?"
 
 DESKRIPSI PROJECT
 - Tema : Prediksi Liver 
