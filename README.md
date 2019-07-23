@@ -8,11 +8,7 @@ DESKRIPSI PROJECT
 - Semua data adalah pasien Liver
 - [Sumber Dataset](https://www.kaggle.com/uciml/indian-liver-patient-records)
 
-# Tampilan Aplikasi Flask
+# Machine Learning
 
-Home
-
-
-
-
+Machine Learning yang digunakan adalah SVM (Support Vector Machine)
 
